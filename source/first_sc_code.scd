@@ -7,6 +7,8 @@
 s.freeAll
 
 
+# s.scope shows an oscilloscope display
+
 x = {[
 	SinOsc.ar(440, 0, 0.2),
 	SinOsc.ar(442, 0, 0.2)
@@ -38,3 +40,6 @@ x.free
 
 
 { Pan2.ar(PinkNoise.ar(0.2), SinOsc.kr(0.5)) }.play;
+
+
+{ PinkNoise.ar(0.2) + SinOsc.ar(440, 0, 0.2) + Saw.ar(660, 0.2) }.scope;
